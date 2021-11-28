@@ -52,7 +52,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="OOP_glossary.css" rel="stylesheet">
+    <link href="principles.css" rel="stylesheet">
   </head>
   <body class="d-flex text-center text-white bg-dark">
     
@@ -85,18 +85,21 @@
     <img src="pictures/abstract.png" alt="Git Bash" class="center" style="width:100%;">
     <code>Note:</code> This calculation.py file also had the class method which bounds that method to class. This class later gets used in our implementation classes (e.g. multiplication). Therefore, we do not need to show clients how they were converted or information that is not necessary such as the logic behind the math. <br><br>
 
-    <code>Encapsulaton</code> <br><br>
+    <code>Encapsulaton</code> is often used to make sure a class doesn't access a data directly unless it is suppose to. It is done by private and protected variables and are provided to others by getter and setter methods. In our calculator, the file calculation.py we protect the values after they get converted from tuple <code>        self.values = Calculation.convert_args_to_tuple_of_float(values)
+    </code> to make sure they do not get accidently mannipulated in anyway because it would mean it could contain values aside from floats. <br><br>
 
-    <code>L - Liskov Substitution Principle</code> states derived classes must be substitutable for there base classes. You should be able to change an instance using sub-type and your own code still should work.<br><br>
-   
-    <code>I - Intergace Segregation Principle</code> states to make it that a client isn't being forced to implement an interface neither force to depend on methonds they do not use. More interfaces are better than too little. Allows to split the responsibility of a class without violating Liskov's principle.<br><br>
+    <code>Polymorphism</code> is when we have same function name but they have different implementations. When we inherit a class we can use method overriding to allow a different functionality to a inherited method. <br><br>
+    <img src="pictures/polymorphism.png" alt="Git Bash" class="center" style="width:100%;">
+    <code>Source: https://www.geeksforgeeks.org/polymorphism-in-python/</code><br><br>
     
-    <code>D - Dependency Inversion Principle</code> states to depend on abstractions and not concrete instances. states that the high-level module must not depend on the low-level module, but they should depend on abstraction.<br><br>
-   
+    <code>Inhertiance</code> is done when one class inherits the properties of another class. This allows for the reusability of code and saves space. For example, in our calculator, we convert every tuple to float in <code>calculation.py</code>. Originally, the conversion was done in every operation class (multiplication, addition, divison, subtraction), however as we can see that would be very repetitive.
+     That is why we created calculation.py and placed conversion method there which later gets inherited by every operation class.<br><br>
+    <img src="pictures/abstract.png" alt="Git Bash" class="center" style="width:100%;">
+    <img src="pictures/addition.png" alt="Git Bash" class="center" style="width:100%;"> <br><br>
 
 
 
-	<b><i>Source:</b></i> <a href="https://towardsdatascience.com/solid-coding-in-python-1281392a6a94">https://towardsdatascience.com/solid-coding-in-python-1281392a6a94</a> <br><br><br>
+
 	<br><br>
 	</p>
 	
